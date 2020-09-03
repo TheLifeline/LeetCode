@@ -7,6 +7,15 @@
 # @lc code=start
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
-        pass
+        max_ = nums[0]
+        m=0
+        for num in nums:
+            m=num+m
+            if m<num:
+                m=num
+            if m>max_:
+                max_ = m
+        return max_
+            
 # @lc code=end
 
